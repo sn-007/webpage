@@ -1,0 +1,38 @@
+.app{
+    height: 100vh;
+
+    .sections{
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: white;
+        position: relative;
+        top: 70px;
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+        scrollbar-width: thin; //for firefox
+        
+        &::-webkit-scrollbar {
+            height: 10px;
+            width: 5px;
+            background:lightgrey;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background:grey;
+            -webkit-border-radius: 1ex;
+            border-radius: 1px;
+            -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+        }
+        
+        &::-webkit-scrollbar-corner {
+            background:lightgrey;
+        }
+
+        > *{
+            width: 100vw;
+            height: calc(100vh - 70px);
+            scroll-snap-align: start;
+        }
+    }
+}
